@@ -1,0 +1,10 @@
+1、run get_flaw_line.py to get the vulnerability-related code lines offered by Juliet. They are for reference only.
+2、Generate DDG for each of Juliet's test case functions ((https://github.com/Fraunhofer-AISEC/cpg).
+3、run get_all_method_info.py to consolidate DDG information. you will get before_cross_fun_all_data.json
+4、run get_final_data.py to implement cross-method ddg, and the nodes of each function are already sorted by line number, but the nodes between functions are not sorted
+5、run map.py to arrange the different function nodes according to the rules, and get the sorted corpus. The corpus undergoes normalization, and finally gets mapped_final_data.json according to the corpus of the sample.
+6、run pre_train_and_rearrange_data.py to change the word of the node into an ordinal number and train the w2v model
+7、run prepare_label_data.py to mark the data of the test set with the corresponding row number, it is enough to only mark the test set here
+8、hand-tagged
+9、run label.py to label the test set data with badsource, badsink, and fixed lines
+10、run get_special_cwe_data.py to separate the cwe 22, 79, 89, 190, 191 data from the test set individually

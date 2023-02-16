@@ -18,5 +18,5 @@ gensim==4.1.2
 
 scikit-learn==1.0.1
 
-dgl==11.1(CUDA)
+dgl==11.1(CUDA) or pyg
 
